@@ -1,7 +1,21 @@
 {
   "compilerOptions": {
+    "target": "es6",             // Set the JavaScript version for compatibility
+    "module": "commonjs",        // Specify module code generation method
+    "allowJs": true,             // Allow JavaScript files to be part of the project
+    "checkJs": true,             // Enable type-checking in JavaScript files
+    "baseUrl": "./",             // Set the base directory for non-relative module names
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],            // Path alias for root directory
+      "@styles/*": ["styles/*"], // Example: Path alias for styles directory
+      "@components/*": ["components/*"] // Example: Path alias for components directory
     }
-  }
+  },
+  "include": [
+    "src/**/*" // Include all files in the src directory for compilation
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules from compilation process
+    "**/*.spec.js"  // Exclude test files (if you have any)
+  ]
 }
